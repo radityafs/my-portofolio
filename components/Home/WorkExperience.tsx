@@ -49,9 +49,9 @@ export default function WorkExperience() {
   const isSelected = (type: string) => filter === type;
 
   return (
-    <section className="lg:min-h-screen flex flex-col text-center items-center my-16">
+    <section className="lg:min-h-screen lg:justify-center flex flex-col text-center items-center my-16">
       <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 mb-4">
-        Work <span className="text-white">Experience</span>
+        Work <span className="">Experience</span>
       </h1>
 
       <p className="text-gray-400 text-muted">
@@ -60,7 +60,7 @@ export default function WorkExperience() {
 
       <div className="grid grid-cols-3 gap-4 my-8 mb-16">
         <button
-          className={`bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 ${
+          className={`bg-gray-800  px-4 py-2 rounded-lg hover:bg-gray-700 ${
             isSelected("full-time") && "bg-gray-700"
           }`}
           onClick={() => setFilter("full-time")}
@@ -68,7 +68,7 @@ export default function WorkExperience() {
           Full-time
         </button>
         <button
-          className={`bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 ${
+          className={`bg-gray-800  px-4 py-2 rounded-lg hover:bg-gray-700 ${
             isSelected("internship") && "bg-gray-700"
           }`}
           onClick={() => setFilter("internship")}
@@ -76,7 +76,7 @@ export default function WorkExperience() {
           Internship
         </button>
         <button
-          className={`bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 ${
+          className={`bg-gray-800  px-4 py-2 rounded-lg hover:bg-gray-700 ${
             isSelected("freelance") && "bg-gray-700"
           }`}
           onClick={() => setFilter("freelance")}

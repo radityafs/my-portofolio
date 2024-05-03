@@ -11,21 +11,21 @@ export default function Footer() {
           href="https://linkedin.com/in/radityafirmansyaputra"
           target="_blank"
         >
-          <FaLinkedinIn className="text-white w-6 h-6" />
+          <FaLinkedinIn className=" w-6 h-6" />
         </a>
         <a
           className="flex items-center justify-center border-2 border-white rounded-full w-12 h-12 "
           href="https://instagram.com/sekutumu"
           target="_blank"
         >
-          <FaInstagram className="text-white w-6 h-6" />
+          <FaInstagram className=" w-6 h-6" />
         </a>
         <a
           className="flex items-center justify-center border-2 border-white rounded-full w-12 h-12 "
           href="https://instagram.com/sekutumu"
           target="_blank"
         >
-          <FaGithub className="text-white w-6 h-6" />
+          <FaGithub className=" w-6 h-6" />
         </a>
       </div>
     </footer>
