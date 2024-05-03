@@ -37,19 +37,19 @@ export default function Projects() {
           </button>
         </div>
 
-        <div className="flex items-center justify-center w-full h-8 gap-8 mb-12">
+        <div className="flex items-center justify-center w-full h-8 gap-4 md:gap-8 mb-12">
           <div className="rounded-full bg-gradient-to-r from-green-400 to-blue-500 p-0.5 mt-16">
             <div className="flex h-full w-full items-center justify-center bg-white dark:bg-black rounded-full py-3 px-6">
-              <a className="font-bold bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 dark:text-white">
-                Web Development
+              <a className="font-bold bg-clip-text text-center text-transparent bg-gradient-to-b from-green-400 to-blue-500 dark:text-white">
+                Web Dev
               </a>
             </div>
           </div>
 
           <div className="rounded-full bg-gradient-to-r from-green-400 to-blue-500 p-0.5 mt-16">
             <div className="flex h-full w-full items-center justify-center bg-white dark:bg-black rounded-full py-3 px-6">
-              <a className="font-bold bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-500 dark:text-white">
-                App Development
+              <a className="font-bold bg-clip-text text-center text-transparent bg-gradient-to-b from-green-400 to-blue-500 dark:text-white">
+                Android Dev
               </a>
             </div>
           </div>

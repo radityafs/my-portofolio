@@ -26,17 +26,18 @@ export default function Projects() {
           Essays, learning, and other miscellaneous goodies.
         </p>
 
-        <div className="flex justify-center w-full md:w-1/2">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-0 px-4 justify-center w-full md:w-1/2">
           <div className="w-full flex items-center justify-center">
             <input
               type="text"
               placeholder="Search Project..."
               className="w-full p-4 bg-[#F0F1F3] dark:bg-gray-800 rounded-lg h-10 focus:outline-none"
             />
-            <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg size-10 flex items-center justify-center mr-4">
+            <button className="bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-lg size-10 flex items-center justify-center md:mr-4">
               <FaSearch />
             </button>
           </div>
+
           <select className="bg-[#F0F1F3] dark:bg-gray-800 rounded-lg h-10 focus:outline-none px-4 py-2">
             <option value="all">Terbaru</option>
           </select>
