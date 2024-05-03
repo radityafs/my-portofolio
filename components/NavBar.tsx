@@ -1,10 +1,13 @@
 "use client";
+
+import { useTheme } from "next-themes";
 import React, { useState } from "react";
-import { FaBars, FaHamburger } from "react-icons/fa";
+import { FaBars, FaRegMoon, FaRegSun } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { theme, setTheme } = useTheme();
 
   return (
     <nav className="container mx-auto dark: flex justify-between items-center px-4 md:px-8 lg:px-16 xl:px-20 my-4 lg:my-8">
@@ -19,7 +22,20 @@ export default function NavBar() {
         <a href="/about">About</a>
       </div>
 
-      <div className="flex gap-4">
+      <div className="flex gap-4 md:gap-6 items-center">
+        {theme === "dark" ? (
+          <FaRegSun
+            href="#"
+            className="text-2xl cursor-pointer bg-gray-800 p-2 rounded-full size-10"
+            onClick={() => setTheme("light")}
+          />
+        ) : (
+          <FaRegMoon
+            onClick={() => setTheme("dark")}
+            className="text-2xl cursor-pointer"
+          />
+        )}
+
         <a
           href="/contact"
           className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold"

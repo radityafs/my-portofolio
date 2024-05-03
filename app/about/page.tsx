@@ -19,7 +19,7 @@ export default function About() {
   return (
     <main>
       <section className="px-4 md:px-8 lg:px-16 xl:px-20 flex my-16">
-        <div className="w-full flex flex-col justify-center items-center gap-6 bg-gray-800 p-16 rounded-lg z-10">
+        <div className="w-full flex flex-col justify-center items-center gap-6 bg-[#F0F1F3] dark:bg-gray-800 p-16 rounded-lg z-10">
           <Image
             src={PhotoProfile}
             alt="Raditya Firman S"
@@ -93,14 +93,14 @@ export default function About() {
 
         <ul className="flex flex-col space-y-8">
           <li className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
               <FaDiceOne className=" w-8 h-8" color="#61DAFB" />
             </div>
             <div>
               <h2 className="text-xl font-bold">
                 1st Place Mobile App Competition
               </h2>
-              <p className="text-gray-400 text-muted">
+              <p className="text-gray-400 ">
                 Become the 1st place in Mobile App Competition at Magic Camp
                 2023
                 <br />
@@ -110,14 +110,14 @@ export default function About() {
             </div>
           </li>
           <li className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
               <FaDiceTwo className=" w-8 h-8" color="#61DAFB" />
             </div>
             <div>
               <h2 className="text-xl font-bold">
                 Finalist Innovative Tech Competition
               </h2>
-              <p className="text-gray-400 text-muted">
+              <p className="text-gray-400">
                 Become the finalist in Innovative Tech Competition at Ifest Comp
                 2022
                 <br />
@@ -126,14 +126,14 @@ export default function About() {
             </div>
           </li>
           <li className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
               <FaDiceThree className=" w-8 h-8" color="#61DAFB" />
             </div>
             <div>
               <h2 className="text-xl font-bold">
                 1st Place Business Plan Competition
               </h2>
-              <p className="text-gray-400 text-muted">
+              <p className="text-gray-400 ">
                 Become the 1st place in Business Plan Competition at Smart IT
                 Fest 2022
                 <br />
@@ -143,14 +143,14 @@ export default function About() {
             </div>
           </li>
           <li className="flex items-center space-x-4">
-            <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
               <FaDiceFour className=" w-8 h-8" color="#61DAFB" />
             </div>
             <div>
               <h2 className="text-xl font-bold">
                 2nd Place Web Development Competition
               </h2>
-              <p className="text-gray-400 text-muted">
+              <p className="text-gray-400 ">
                 Become the 2nd place in Web Development Competition at Smart
                 Inotek Comp 2022
                 <br />
@@ -171,38 +171,38 @@ export default function About() {
           in the browser.
         </p>
 
-        <h2 className="uppercase font-bold text-gray-400 text-muted mb-4 text-center md:text-left text-transparent font-medium bg-clip-text bg-gradient-to-b from-green-400 to-blue-500">
+        <h2 className="uppercase font-bold text-gray-400  mb-4 text-center md:text-left text-transparent font-medium bg-clip-text bg-gradient-to-b from-green-400 to-blue-500">
           Languages
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <div className="w-12 h-12 bg-[#292D35] rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
             <FaReact className=" w-8 h-8" color="#61DAFB" />
           </div>
-          <div className="w-12 h-12 bg-[#292D35] rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
             <FaHtml5 className=" w-8 h-8" color="#E34F26" />
           </div>
-          <div className="w-12 h-12 bg-[#292D35] rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
             <FaJava className=" w-8 h-8" color="#E34F26" />
           </div>
-          <div className="w-12 h-12 bg-[#292D35] rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
             <FaJava className=" w-8 h-8" color="#E34F26" />
           </div>
         </div>
 
-        <h2 className="uppercase font-bold text-gray-400 text-muted mb-4 text-center md:text-left text-transparent font-medium bg-clip-text bg-gradient-to-b from-green-400 to-blue-500">
+        <h2 className="uppercase font-bold text-gray-400  mb-4 text-center md:text-left text-transparent font-medium bg-clip-text bg-gradient-to-b from-green-400 to-blue-500">
           Dev tools
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="w-12 h-12 bg-[#292D35] rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
             <FaReact className=" w-8 h-8" color="#61DAFB" />
           </div>
-          <div className="w-12 h-12 bg-[#292D35] rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
             <FaHtml5 className=" w-8 h-8" color="#E34F26" />
           </div>
-          <div className="w-12 h-12 bg-[#292D35] rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
             <FaJava className=" w-8 h-8" color="#E34F26" />
           </div>
-          <div className="w-12 h-12 bg-[#292D35] rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
             <FaJava className=" w-8 h-8" color="#E34F26" />
           </div>
         </div>

@@ -11,6 +11,7 @@ import {
   FaLinkedinIn,
   FaReact,
 } from "react-icons/fa";
+import Testimonials from "@/components/Home/Testimonials";
 
 export default function Home() {
   return (
@@ -227,35 +228,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="lg:min-h-screen px-4 md:px-8 lg:px-16 xl:px-20 flex flex-col items-center justify-center my-16">
-        <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-green-400 to-blue-400 mb-4 text-center md:text-left">
-          Testimonials
-        </h1>
-
-        <p className="text-gray-400 text-mute mb-8 text-center w-80">
-          People I've worked with have said some nice things...
-        </p>
-
-        <Image
-          src={PhotoProfile}
-          alt="Profile Image"
-          className="rounded-full w-20 h-20 mb-4"
-        />
-
-        <p className=" text-lg text-center mb-4 w-1/2">
-          "Raditya is a great developer. He has a good understanding of the
-          project and always delivers on time."
-        </p>
-
-        <h2 className="text-xl font-bold">John Doe</h2>
-        <p className="text-gray-400 text-muted">CEO of Company</p>
-
-        <div className="flex space-x-4 mt-12">
-          <div className="w-4 h-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-full"></div>
-          <div className="w-4 h-4 bg-[#F0F1F3] dark:bg-gray-800 rounded-full"></div>
-          <div className="w-4 h-4 bg-[#F0F1F3] dark:bg-gray-800 rounded-full"></div>
-        </div>
-      </section>
+      <Testimonials />
 
       <section className="px-4 md:px-8 lg:px-16 xl:px-20 lg:min-h-screen flex flex-col items-center my-16">
         <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 ">

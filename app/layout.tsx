@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <NavBar />
-        {children}
-        <Footer />
+        <ThemeProvider attribute="class">
+          <NavBar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

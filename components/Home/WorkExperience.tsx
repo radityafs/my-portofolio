@@ -60,24 +60,24 @@ export default function WorkExperience() {
 
       <div className="grid grid-cols-3 gap-4 my-8 mb-16">
         <button
-          className={`bg-gray-800  px-4 py-2 rounded-lg hover:bg-gray-700 ${
-            isSelected("full-time") && "bg-gray-700"
+          className={`bg-[#F0F1F3] dark:bg-gray-800  px-4 py-2 rounded-lg hover:bg-gray-700 ${
+            isSelected("full-time") && "bg-gray-700 text-white"
           }`}
           onClick={() => setFilter("full-time")}
         >
           Full-time
         </button>
         <button
-          className={`bg-gray-800  px-4 py-2 rounded-lg hover:bg-gray-700 ${
-            isSelected("internship") && "bg-gray-700"
+          className={`bg-[#F0F1F3] dark:bg-gray-800  px-4 py-2 rounded-lg hover:bg-gray-700 ${
+            isSelected("internship") && "bg-gray-700 text-white"
           }`}
           onClick={() => setFilter("internship")}
         >
           Internship
         </button>
         <button
-          className={`bg-gray-800  px-4 py-2 rounded-lg hover:bg-gray-700 ${
-            isSelected("freelance") && "bg-gray-700"
+          className={`bg-[#F0F1F3] dark:bg-gray-800  px-4 py-2 rounded-lg hover:bg-gray-700 ${
+            isSelected("freelance") && "bg-gray-700 text-white"
           }`}
           onClick={() => setFilter("freelance")}
         >
@@ -90,7 +90,7 @@ export default function WorkExperience() {
           .filter((exp) => exp.type === filter)
           .map((exp, index) => (
             <div
-              className="sm:w-full md:w-1/2 lg:w-1/3 mb-16 text-muted"
+              className="sm:w-full p-4 md:w-1/2 lg:w-1/3 mb-16 text-muted"
               key={index}
             >
               <h2 className="text-gray-400 uppercase mb-2 text-center">
