@@ -1,6 +1,14 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function CTA() {
   return (
-    <section className="px-4 md:px-8 lg:px-16 xl:px-20 flex flex-col items-center">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+      className="px-4 md:px-8 lg:px-16 xl:px-20 flex flex-col items-center"
+    >
       <div className="w-full bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-md lg:rounded-lg flex flex-col justify-center items-center py-10">
         <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
           Let's <span className="">Work Together</span>
@@ -18,6 +26,6 @@ export default function CTA() {
           Contact Me
         </a>
       </div>
-    </section>
+    </motion.section>
   );
 }

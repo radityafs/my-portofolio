@@ -3,7 +3,7 @@
 import Image from "next/image";
 import PhotoProfile from "@/app/profile.png";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 type TestimonialsProps = {
   name: string;
@@ -27,7 +27,7 @@ const testimonials: TestimonialsProps[] = [
 ];
 
 export default function Testimonials() {
-  const [show, setShow] = useState(0);
+  const [show, setShow] = useState<number>(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -49,27 +49,7 @@ export default function Testimonials() {
         People I've worked with have said some nice things...
       </p>
 
-      {testimonials.map((testimonial, index) => (
-        <div
-          key={index}
-          className={`text-center flex-col items-center ${
-            show === index ? "flex" : "hidden"
-          }`}
-        >
-          <Image
-            src={PhotoProfile}
-            alt="Profile Image"
-            className="rounded-full w-20 h-20 mb-4"
-          />
-
-          <p className=" text-lg text-center mb-4 w-1/2">
-            {testimonial.message}
-          </p>
-
-          <h2 className="text-xl font-bold">{testimonial.name}</h2>
-          <p className="text-gray-400 text-muted">{testimonial.role}</p>
-        </div>
-      ))}
+      <CardTestimonials {...testimonials[show]} key={show} />
 
       <div className="flex justify-center items-center mt-8">
         {testimonials.map((_, index) => (
@@ -85,5 +65,33 @@ export default function Testimonials() {
         ))}
       </div>
     </section>
+  );
+}
+
+function CardTestimonials(
+  { name, role, message }: TestimonialsProps,
+  index: number
+) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, ease: "easeInOut" }}
+      key={index}
+      className={`text-center flex-col items-center flex`}
+    >
+      <Image
+        src={PhotoProfile}
+        alt="Profile Image"
+        className="rounded-full w-20 h-20 mb-4"
+      />
+
+      <p className="text-lg text-center mb-4 p-4 w-full md:w-1/2">
+        "{message}"
+      </p>
+
+      <h2 className="text-xl font-bold">{name}</h2>
+      <p className="text-gray-400 text-muted">{role}</p>
+    </motion.div>
   );
 }

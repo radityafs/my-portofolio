@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 
 type Experience = {
   type: string | "full-time" | "internship" | "freelance";
@@ -9,6 +10,7 @@ type Experience = {
   description: string;
   date: string;
 };
+
 const experiences: Experience[] = [
   {
     type: "full-time",
@@ -46,7 +48,9 @@ const experiences: Experience[] = [
 
 export default function WorkExperience() {
   const [filter, setFilter] = useState<string>("full-time");
+
   const isSelected = (type: string) => filter === type;
+  const experiencesFiltered = experiences.filter((exp) => exp.type === filter);
 
   return (
     <section className="lg:min-h-screen lg:justify-center flex flex-col text-center items-center my-16">
@@ -86,26 +90,25 @@ export default function WorkExperience() {
       </div>
 
       <div className="flex flex-col items-center w-full">
-        {experiences
-          .filter((exp) => exp.type === filter)
-          .map((exp, index) => (
-            <div
-              className="sm:w-full p-4 md:w-1/2 lg:w-1/3 mb-16 text-muted"
-              key={index}
-            >
-              <h2 className="text-gray-400 uppercase mb-2 text-center">
-                {exp.role}
-              </h2>
-              <h2 className="text-xl font-bold mb-4 text-center">
-                {exp.company}
-              </h2>
-              <p className="text-gray-400 text-center mb-4">
-                {exp.description}
-              </p>
-              <p className="text-gray-400 text-center">{exp.date}</p>
-            </div>
-          ))}
+        {experiencesFiltered.map((exp, index) => ExperienceCard(exp, index))}
       </div>
     </section>
+  );
+}
+
+function ExperienceCard(exp: Experience, index: number) {
+  return (
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      transition={{ ease: "easeInOut", duration: 0.5 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      className="sm:w-full p-4 md:w-1/2 lg:w-1/3 mb-16 text-muted"
+      key={index}
+    >
+      <h2 className="text-gray-400 uppercase mb-2 text-center">{exp.role}</h2>
+      <h2 className="text-xl font-bold mb-4 text-center">{exp.company}</h2>
+      <p className="text-gray-400 text-center mb-4">{exp.description}</p>
+      <p className="text-gray-400 text-center">{exp.date}</p>
+    </motion.div>
   );
 }

@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import { FaDiceOne, FaDiceTwo, FaDiceThree, FaDiceFour } from "react-icons/fa";
 import OrnamentPolygon from "@/app/ornament-polygon.svg";
+import { motion } from "framer-motion";
 
 export default function Achievement() {
   return (
@@ -19,74 +21,64 @@ export default function Achievement() {
         Here is a list of my recent achievement
       </p>
 
-      <ul className="flex flex-col space-y-8">
-        <li className="flex items-center space-x-4">
-          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
-            <FaDiceOne className=" w-8 h-8" color="#61DAFB" />
-          </div>
-          <div>
-            <h2 className="text-xl font-bold">
-              1st Place Mobile App Competition
-            </h2>
-            <p className="text-gray-400 ">
-              Become the 1st place in Mobile App Competition at Magic Camp 2023
-              <br />
-              Held by Himpunan Mahasiswa Manajemen Administrasi Universitas
-              Sebelas Maret
-            </p>
-          </div>
-        </li>
-        <li className="flex items-center space-x-4">
-          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
-            <FaDiceTwo className=" w-8 h-8" color="#61DAFB" />
-          </div>
-          <div>
-            <h2 className="text-xl font-bold">
-              Finalist Innovative Tech Competition
-            </h2>
-            <p className="text-gray-400">
-              Become the finalist in Innovative Tech Competition at Ifest Comp
-              2022
-              <br />
-              Held by Himpunan Mahasiswa Informatika Universitas Padjajaran
-            </p>
-          </div>
-        </li>
-        <li className="flex items-center space-x-4">
-          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
-            <FaDiceThree className=" w-8 h-8" color="#61DAFB" />
-          </div>
-          <div>
-            <h2 className="text-xl font-bold">
-              1st Place Business Plan Competition
-            </h2>
-            <p className="text-gray-400 ">
-              Become the 1st place in Business Plan Competition at Smart IT Fest
-              2022
-              <br />
-              Held by Himpunan Mahasiswa D3 Teknik Informatika Universitas
-              Sebelas Maret
-            </p>
-          </div>
-        </li>
-        <li className="flex items-center space-x-4">
-          <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
-            <FaDiceFour className=" w-8 h-8" color="#61DAFB" />
-          </div>
-          <div>
-            <h2 className="text-xl font-bold">
-              2nd Place Web Development Competition
-            </h2>
-            <p className="text-gray-400 ">
-              Become the 2nd place in Web Development Competition at Smart
-              Inotek Comp 2022
-              <br />
-              Held by Himpunan Mahasiswa D3 Teknik Informatika PSDKU Universitas
-              Sebelas Maret
-            </p>
-          </div>
-        </li>
-      </ul>
+      <motion.ul
+        initial={{ x: -100, opacity: 0 }}
+        transition={{ ease: "easeInOut", duration: 0.5 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        className="flex flex-col space-y-8"
+      >
+        <AchievementList
+          icon={<FaDiceOne className="w-8 h-8" color="#61DAFB" />}
+          title="1st Place Mobile App Competition"
+          description="Become the 1st place in Mobile App Competition at Magic Camp 2023
+          Held by Himpunan Mahasiswa Manajemen Administrasi Universitas Sebelas Maret"
+        />
+        <AchievementList
+          icon={<FaDiceTwo className="w-8 h-8" color="#61DAFB" />}
+          title="Finalist Innovative Tech Competition"
+          description="Become the finalist in Innovative Tech Competition at Ifest Comp 2022
+          Held by Himpunan Mahasiswa Informatika Universitas Padjajaran"
+        />
+        <AchievementList
+          icon={<FaDiceThree className="w-8 h-8" color="#61DAFB" />}
+          title="1st Place Business Plan Competition"
+          description="Become the 1st place in Business Plan Competition at Smart IT Fest 2022
+          Held by Himpunan Mahasiswa D3 Teknik Informatika Universitas Sebelas Maret"
+        />
+        <AchievementList
+          icon={<FaDiceFour className="w-8 h-8" color="#61DAFB" />}
+          title="2nd Place Web Development Competition"
+          description="Become the 2nd place in Web Development Competition at Smart Inotek Comp 2022
+          Held by Himpunan Mahasiswa D3 Teknik Informatika PSDKU Universitas Sebelas Maret"
+        />
+      </motion.ul>
     </section>
+  );
+}
+
+function AchievementList({
+  icon,
+  title,
+  description,
+}: Readonly<{
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}>) {
+  return (
+    <motion.li
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="flex items-center space-x-4"
+    >
+      <div className="w-12 h-12 bg-[#F0F1F3] dark:bg-gray-800 rounded-full flex items-center justify-center">
+        {icon}
+      </div>
+      <div>
+        <h2 className="text-xl font-bold">{title}</h2>
+        <p className="text-gray-400 w-full md:w-1/2">{description}</p>
+      </div>
+    </motion.li>
   );
 }

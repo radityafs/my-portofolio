@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import OrnamentCircle from "@/app/ornament-circle.svg";
 import PhotoProfile from "@/app/profile.png";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -11,7 +13,13 @@ export default function Home() {
         alt="Ornament Circle"
         className="absolute right-0 top-20 z-0"
       />
-      <div className="flex w-full flex-col justify-center space-y-16 z-10">
+
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ ease: "easeInOut", duration: 0.5 }}
+        className="flex w-full flex-col justify-center space-y-16 z-10"
+      >
         <h1 className="text-3xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight">
           Hello, I'm{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
@@ -84,7 +92,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

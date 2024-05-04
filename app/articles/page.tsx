@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import OrnamentCircle from "@/app/ornament-circle2.svg";
 import { FaSearch } from "react-icons/fa";
-import { FaReact, FaHtml5, FaJava } from "react-icons/fa";
 import ProjectImage from "@/app/project_image.png";
+import Card from "@/components/Card";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   return (
@@ -45,113 +48,38 @@ export default function Projects() {
       </section>
 
       <section className="px-4 md:px-8 lg:px-16 xl:px-20 flex flex-col items-center my-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="w-full flex flex-col justify-center">
-            <div className="bg-[#F0F1F3] dark:bg-gray-800 px-8 pt-8 rounded-lg w-full mb-8">
-              <div className="flex gap-4 items-center mb-8">
-                <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-              </div>
-
-              <Image
-                src={ProjectImage}
-                alt="Project Image"
-                className="w-full"
-              />
-            </div>
-
-            <p className="text-gray-400 mb-4 text-muted mb-4"> 2 days ago</p>
-            <h2 className="text-xl font-bold mb-4">
-              Cras risus eros, faucibus sit amet augue id, tempus
-              pellentesque...
-            </h2>
-          </div>
-          <div className="w-full flex flex-col justify-center">
-            <div className="bg-[#F0F1F3] dark:bg-gray-800 px-8 pt-8 rounded-lg w-full mb-8">
-              <div className="flex gap-4 items-center mb-8">
-                <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-              </div>
-
-              <Image
-                src={ProjectImage}
-                alt="Project Image"
-                className="w-full"
-              />
-            </div>
-
-            <p className="text-gray-400 mb-4 text-muted mb-4"> 2 days ago</p>
-            <h2 className="text-xl font-bold mb-4">
-              Cras risus eros, faucibus sit amet augue id, tempus
-              pellentesque...
-            </h2>
-          </div>
-          <div className="w-full flex flex-col justify-center">
-            <div className="bg-[#F0F1F3] dark:bg-gray-800 px-8 pt-8 rounded-lg w-full mb-8">
-              <div className="flex gap-4 items-center mb-8">
-                <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-              </div>
-
-              <Image
-                src={ProjectImage}
-                alt="Project Image"
-                className="w-full"
-              />
-            </div>
-
-            <p className="text-gray-400 mb-4 text-muted mb-4"> 2 days ago</p>
-            <h2 className="text-xl font-bold mb-4">
-              Cras risus eros, faucibus sit amet augue id, tempus
-              pellentesque...
-            </h2>
-          </div>
-          <div className="w-full flex flex-col justify-center">
-            <div className="bg-[#F0F1F3] dark:bg-gray-800 px-8 pt-8 rounded-lg w-full mb-8">
-              <div className="flex gap-4 items-center mb-8">
-                <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-              </div>
-
-              <Image
-                src={ProjectImage}
-                alt="Project Image"
-                className="w-full"
-              />
-            </div>
-
-            <p className="text-gray-400 mb-4 text-muted mb-4"> 2 days ago</p>
-            <h2 className="text-xl font-bold mb-4">
-              Cras risus eros, faucibus sit amet augue id, tempus
-              pellentesque...
-            </h2>
-          </div>
-          <div className="w-full flex flex-col justify-center">
-            <div className="bg-[#F0F1F3] dark:bg-gray-800 px-8 pt-8 rounded-lg w-full mb-8">
-              <div className="flex gap-4 items-center mb-8">
-                <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-              </div>
-
-              <Image
-                src={ProjectImage}
-                alt="Project Image"
-                className="w-full"
-              />
-            </div>
-
-            <p className="text-gray-400 mb-4 text-muted mb-4"> 2 days ago</p>
-            <h2 className="text-xl font-bold mb-4">
-              Cras risus eros, faucibus sit amet augue id, tempus
-              pellentesque...
-            </h2>
-          </div>
-        </div>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ ease: "easeInOut", duration: 0.5 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          <Card
+            title="Cras risus eros, faucibus sit amet augue id, tempus pellentesque..."
+            date="2 days ago"
+            image={ProjectImage}
+          />
+          <Card
+            title="Cras risus eros, faucibus sit amet augue id, tempus pellentesque..."
+            date="2 days ago"
+            image={ProjectImage}
+          />
+          <Card
+            title="Cras risus eros, faucibus sit amet augue id, tempus pellentesque..."
+            date="2 days ago"
+            image={ProjectImage}
+          />
+          <Card
+            title="Cras risus eros, faucibus sit amet augue id, tempus pellentesque..."
+            date="2 days ago"
+            image={ProjectImage}
+          />
+          <Card
+            title="Cras risus eros, faucibus sit amet augue id, tempus pellentesque..."
+            date="2 days ago"
+            image={ProjectImage}
+          />
+        </motion.div>
       </section>
     </main>
   );

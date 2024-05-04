@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import ProjectImage from "@/app/project_image.png";
+import { motion } from "framer-motion";
+import Card from "../Card";
 
 export default function Articles() {
   return (
@@ -15,56 +19,28 @@ export default function Articles() {
         Here are a few past design projects I've worked on. Want to see more?
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="w-full flex flex-col justify-center">
-          <div className="bg-[#F0F1F3] dark:bg-gray-800 px-8 pt-8 rounded-lg w-full mb-8">
-            <div className="flex gap-4 items-center mb-8">
-              <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-            </div>
-
-            <Image src={ProjectImage} alt="Project Image" className="w-full" />
-          </div>
-
-          <p className="text-gray-400 mb-4 text-muted mb-4"> 2 days ago</p>
-          <h2 className="text-xl font-bold mb-4">
-            Cras risus eros, faucibus sit amet augue id, tempus pellentesque...
-          </h2>
-        </div>
-        <div className="w-full flex flex-col justify-center">
-          <div className="bg-[#F0F1F3] dark:bg-gray-800 px-8 pt-8 rounded-lg w-full mb-8">
-            <div className="flex gap-4 items-center mb-8">
-              <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-            </div>
-
-            <Image src={ProjectImage} alt="Project Image" className="w-full" />
-          </div>
-
-          <p className="text-gray-400 mb-4 text-muted mb-4"> 2 days ago</p>
-          <h2 className="text-xl font-bold mb-4">
-            Cras risus eros, faucibus sit amet augue id, tempus pellentesque...
-          </h2>
-        </div>
-        <div className="w-full flex flex-col justify-center">
-          <div className="bg-[#F0F1F3] dark:bg-gray-800 px-8 pt-8 rounded-lg w-full mb-8">
-            <div className="flex gap-4 items-center mb-8">
-              <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-              <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-            </div>
-
-            <Image src={ProjectImage} alt="Project Image" className="w-full" />
-          </div>
-
-          <p className="text-gray-400 mb-4 text-muted mb-4"> 2 days ago</p>
-          <h2 className="text-xl font-bold mb-4">
-            Cras risus eros, faucibus sit amet augue id, tempus pellentesque...
-          </h2>
-        </div>
-      </div>
+      <motion.div
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <Card
+          title="Cras risus eros, faucibus sit amet augue id, tempus pellentesque..."
+          date="2 days ago"
+          image={ProjectImage}
+        />
+        <Card
+          title="Cras risus eros, faucibus sit amet augue id, tempus pellentesque..."
+          date="2 days ago"
+          image={ProjectImage}
+        />
+        <Card
+          title="Cras risus eros, faucibus sit amet augue id, tempus pellentesque..."
+          date="2 days ago"
+          image={ProjectImage}
+        />
+      </motion.div>
 
       <div className="rounded-full bg-gradient-to-r from-green-400 to-blue-500 p-0.5 mt-16">
         <div className="flex h-full w-full items-center justify-center bg-white dark:bg-black rounded-full py-3 px-6">

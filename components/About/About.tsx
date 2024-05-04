@@ -2,14 +2,26 @@
 import Image from "next/image";
 import { FaLinkedinIn, FaInstagram, FaGithub } from "react-icons/fa";
 import PhotoProfile from "@/app/profile.png";
-
+import OrnamentCircle from "@/app/ornament-circle.svg";
 import Lottie from "lottie-react";
 import HelloLottie from "@/public/hello.json";
+import { motion } from "framer-motion";
 
 export default function AboutSection() {
   return (
-    <section className="px-4 md:px-8 lg:px-16 xl:px-20 flex my-16">
-      <div className="w-full flex flex-col justify-center items-center gap-6 rounded-lg z-10">
+    <section className="px-4 md:px-8 relative md:min-h-screen lg:px-16 xl:px-20 flex items-center justify-center">
+      <Image
+        src={OrnamentCircle}
+        alt="Ornament Circle"
+        className="absolute right-0 top-20 z-0"
+      />
+
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        transition={{ ease: "easeInOut", duration: 0.5 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        className="w-full flex flex-col justify-center items-center gap-6 rounded-lg z-10"
+      >
         <Image
           src={PhotoProfile}
           alt="Raditya Firman S"
@@ -68,7 +80,7 @@ export default function AboutSection() {
             <FaGithub className=" w-6 h-6" />
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
