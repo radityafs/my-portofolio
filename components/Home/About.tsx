@@ -16,7 +16,7 @@ export default function Home() {
 
       <motion.div
         initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 0.5 }}
         className="flex w-full flex-col justify-center space-y-16 z-10"
       >
