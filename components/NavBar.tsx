@@ -56,7 +56,7 @@ export default function NavBar() {
 
       {isOpen && (
         <div
-          className="md:hidden absolute size-full text-white top-0 left-0 right-0 bg-gray-800 p-4 rounded-lg"
+          className="md:hidden fixed size-full text-white top-0 left-0 right-0 bg-gray-800 p-4 rounded-lg"
           style={{
             zIndex: 99,
           }}
