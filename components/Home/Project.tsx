@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import { FaHtml5, FaJava, FaReact } from "react-icons/fa";
 import ProjectImage from "@/app/project_image.png";
 import { motion } from "framer-motion";
 import Card from "../Card";

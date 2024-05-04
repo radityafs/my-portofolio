@@ -10,7 +10,7 @@ import Articles from "@/components/Home/Article";
 
 export default function Home() {
   return (
-    <main className="lg:my-8">
+    <main className="lg:my-8 overflow-x-hidden">
       <About />
       <Project />
       <CTA />

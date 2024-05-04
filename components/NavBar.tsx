@@ -11,7 +11,7 @@ export default function NavBar() {
 
   return (
     <nav
-      className="container mx-auto flex justify-between items-center px-4 md:px-8 lg:px-16 xl:px-20 my-4 lg:my-8"
+      className="container mx-auto overflow-x-hidden flex justify-between items-center px-4 md:px-8 lg:px-16 xl:px-20 my-4 lg:my-8"
       style={{
         zIndex: 100,
       }}

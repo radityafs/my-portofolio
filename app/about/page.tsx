@@ -5,7 +5,7 @@ import Stack from "@/components/About/Stack";
 
 export default function About() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <AboutSection />
       <WorkExperience />
       <Achievement />
