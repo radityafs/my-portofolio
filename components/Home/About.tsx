@@ -38,33 +38,31 @@ export default function Home() {
         </h1>
 
         <div className="flex flex-col bg-[#F0F1F3] dark:bg-gray-800 p-8 rounded-lg z-10">
-          <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:space-x-8 justify-between">
-            <div className="flex flex-col text-center md:text-left md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
-              <Image
-                src={PhotoProfile}
-                alt="Raditya Firman S"
-                className="rounded-full w-20 h-20 mr-0 lg:mr-8"
-              />
+          <div className="flex flex-col text-center md:text-left md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 gap-8">
+            <Image
+              src={PhotoProfile}
+              alt="Raditya Firman S"
+              className="rounded-full w-20 h-20 mr-0"
+            />
 
-              <div className="flex flex-col space-y-4 md:space-y-0 text-[#667085] dark:text-white">
-                <p className="text-3xl font-semibold mb-5">About me 🚀</p>
-                <p className=" text-lg leading-relaxed">
-                  I'm a final year informatics engineering student at{" "}
-                  <a
-                    href="https://www.uns.ac.id/"
-                    className="text-blue-400 hover:underline"
-                  >
-                    Universitas Sebelas Maret.
-                  </a>{" "}
-                  Currently Working as a Full Stack Developer at{" "}
-                  <a
-                    href="https://elnusa.co.id/"
-                    className="text-blue-400 hover:underline"
-                  >
-                    PT. Elnusa Tbk
-                  </a>
-                </p>
-              </div>
+            <div className="flex flex-col space-y-4 md:space-y-0 text-[#667085] dark:text-white">
+              <p className="text-3xl font-semibold mb-5">About me 🚀</p>
+              <p className="text-lg leading-relaxed">
+                I'm a final year informatics engineering student at{" "}
+                <a
+                  href="https://www.uns.ac.id/"
+                  className="text-blue-400 hover:underline"
+                >
+                  Universitas Sebelas Maret.
+                </a>{" "}
+                Currently Working as a Full Stack Developer at{" "}
+                <a
+                  href="https://elnusa.co.id/"
+                  className="text-blue-400 hover:underline"
+                >
+                  PT. Elnusa Tbk
+                </a>
+              </p>
             </div>
 
             <div className="flex space-x-4">
